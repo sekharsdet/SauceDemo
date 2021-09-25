@@ -1,1 +1,9 @@
-{}
+{
+    "pageLoadTimeout": 20000,
+    "video": true,
+    "videosFolder": "output/videos",
+    "screenshotsFolder": "output/screenshots",
+    "chromeWebSecurity": false,
+    "testFiles": "**/*.{feature,features,ts}",
+    "experimentalInteractiveRunEvents":true
+}

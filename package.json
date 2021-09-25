@@ -2,18 +2,32 @@
   "name": "SauceDemo",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "generate:report":"node html-report.js",
+    "test:qa": "cypress run -e fileConfig=qa TAGS='@smoke' & npm run generate:report",
+    "test:dev": "cypress run -e fileConfig=dev TAGS='@smoke' & npm run generate:report"
   },
   "keywords": [],
+
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^8.4.1"
+    "cypress": "^8.0.0"
   },
   "devDependencies": {
     "cypress-cucumber-preprocessor": "^4.2.0",
+    "cypress-multi-reporters": "^1.5.0",
+    "mochawesome": "^6.2.2",
+    "multiple-cucumber-html-reporter": "^1.18.0",
+    "ts-node": "^10.2.1",
     "typescript": "^4.4.3"
+  },
+  "cypress-cucumber-preprocessor": {
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "reports/cucumber",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
   }
 }

@@ -1,11 +1,16 @@
 {
-    "include": ["./**/*.ts"],
+    "include": [
+        "./**/*.ts"
+    ],
     "compilerOptions": {
         "resolveJsonModule": true,
         "module": "commonjs",
         "esModuleInterop": true,
         "target": "es6",
         "sourceMap": true,
-        "types": ["cypress","node"]
+        "types": [
+            "cypress",
+            "node"
+        ]
     }
 }
