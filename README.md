@@ -28,3 +28,5 @@ npx cypress open
 
 ## Report
 You can see the detaied html report under reports/htmlreport/index.html
+
+![image](https://user-images.githubusercontent.com/44940087/134771850-3ae736b6-7ef3-4e1a-8846-d88333966dd0.png)
