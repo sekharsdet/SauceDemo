@@ -10,6 +10,17 @@ export default class HomePage {
     }
 
 
+    enterUserName = (username) => {
+        cy.get(this.selectors.usernameTextbox).type(username)
+    }
+    enterPassword = (password) => {
+        cy.get(this.selectors.passwordTextbox).type(password)
+    }
+
+    clickOnLogin = () => {
+        cy.get(this.selectors.loginButton).click()
+    }
+
     loginIntoApplication = (username, password) => {
         cy.get(this.selectors.usernameTextbox).type(username)
         cy.get(this.selectors.passwordTextbox).type(password)
